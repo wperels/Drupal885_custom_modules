@@ -1,0 +1,99 @@
+
+# Created by https://www.gitignore.io/api/phpunit,windows,drupal8,netbeans
+# Edit at https://www.gitignore.io/?templates=phpunit,windows,drupal8,netbeans
+
+### Drupal8 ###
+# Ignore configuration files that may contain sensitive information
+/sites/*/*settings*.php
+/sites/*/*services*.yml
+
+# Ignore paths that may contain user-generated content
+/sites/*/files
+/sites/*/public
+/sites/*/private
+/sites/*/files-public
+/sites/*/files-private
+
+# Ignore paths that may contain temporary files
+/sites/*/translations
+/sites/*/tmp
+/sites/*/cache
+
+# Ignore drupal core (if not versioning drupal sources)
+/core
+/modules/README.txt
+/profiles/README.txt
+/sites/README.txt
+/sites/example.sites.php
+/sites/example.settings.local.php
+/sites/development.services.yml
+/themes/README.txt
+/vendor
+/.csslintrc
+/.editorconfig
+/.eslintignore
+/.eslintrc.json
+/.gitattributes
+/.htaccess
+/autoload.php
+/composer.json
+/composer.lock
+/example.gitignore
+/index.php
+/LICENSE.txt
+/README.txt
+/robots.txt
+/update.php
+/web.config
+
+### NetBeans ###
+**/nbproject/private/
+**/nbproject/Makefile-*.mk
+**/nbproject/Package-*.bash
+build/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
+
+### PHPUnit ###
+# Covers PHPUnit
+# Reference: https://phpunit.de/
+
+# Generated files
+.phpunit.result.cache
+
+# PHPUnit
+/app/phpunit.xml
+/phpunit.xml
+
+# Build data
+/build/
+
+### Windows ###
+# Windows thumbnail cache files
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+
+# Dump file
+*.stackdump
+
+# Folder config file
+[Dd]esktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Windows Installer files
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+
+# Windows shortcuts
+*.lnk
+
+# End of https://www.gitignore.io/api/phpunit,windows,drupal8,netbeans
