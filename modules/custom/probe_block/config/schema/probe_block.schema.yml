@@ -1,0 +1,8 @@
+# Block schema
+block.settings.probe_block:
+  type: block_settings
+  mapping:
+    number_of_items:
+      type: integer
+      label: 'Number of items'
+    

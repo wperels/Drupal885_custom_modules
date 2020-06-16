@@ -1,0 +1,22 @@
+<?php
+
+/**
+ * @file
+ * A module demonstrating Drupal coding practices and APIs.
+ *
+ * This module provides a block that lists all of the
+ * installed modules in our Drupal system. It illustrates coding standards,
+ * practices, and API use for Drupal 8.
+ * 
+ *  see https://robvarkonyi.com/blog/ultimate-guide-drupal-8/your-first-drupal-8-module
+*/
+
+/**
+ * Implements hook_help().
+*/
+function probe_block_help($route_name, \Drupal\Core\Routing\RouteMatchInterface $route_match) {
+  if ($route_name === 'help.page.probe_block') {
+    return t('A probe block demo module.');
+  }
+}
+
