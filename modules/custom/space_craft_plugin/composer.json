@@ -1,0 +1,14 @@
+{
+  "name": "drupal/space_craft_plugin",
+  "type": "drupal-module",
+  "description": "Plugin for SpaceCraft type",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/space_craft_plugin",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/space_craft_plugin",
+    "source": "http://cgit.drupalcode.org/space_craft_plugin"
+  },
+  "require": { }
+}

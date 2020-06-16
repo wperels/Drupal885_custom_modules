@@ -1,0 +1,8 @@
+
+space_craft_plugin.space_craft_plugin_controller_description:
+  path: '/space_craft_plugin/description'
+  defaults:
+    _controller: '\Drupal\space_craft_plugin\Controller\SpaceCraftPluginController::description'
+    _title: 'description'
+  requirements:
+    _permission: 'access content'

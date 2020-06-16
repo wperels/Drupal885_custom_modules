@@ -1,0 +1,7 @@
+name: 'Space Craft Plugin'
+type: module
+description: 'Plugin for SpaceCraft type'
+core: 8.x
+package: 'Custom modules'
+dependencies:
+  - space_craft

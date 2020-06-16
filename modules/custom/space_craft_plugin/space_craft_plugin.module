@@ -1,0 +1,35 @@
+<?php
+
+/**
+ * @file
+ * Contains space_craft_plugin.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function space_craft_plugin_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the space_craft_plugin module.
+    case 'help.page.space_craft_plugin':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Plugin for SpaceCraft type') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function space_craft_plugin_theme() {
+  return [
+    'space_craft_plugin' => [
+      'render element' => 'children',
+    ],
+  ];
+}
