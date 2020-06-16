@@ -1,0 +1,19 @@
+<?php
+
+/* 
+ *  Implements hook_probe_info_alter().
+ * 
+ * Any module can implement hook_probe_info_alter() and alter the definitions
+ * of all plugins discovered by the plugin manager.
+ *
+ * Note: Plugin definitions are cached after initially being discovered, and
+ * altered. Any changes here will require a cache clear to take effect.
+ */
+
+function space_craft_probe_info_alter(&$probe_plugin_info) {
+  // change the 'description' property for all probes.
+   foreach($probe_plugin_info as $plugin_id => $plugin_definition) {
+     // Always uppercase the word nasa in probe descriptions
+     $probe_plugin_info[$plugin_id]['description'] = str_replace(t('nasa'), t('NASA'), $probe_plugin_info[$plugin_id]['description']);
+   }
+}

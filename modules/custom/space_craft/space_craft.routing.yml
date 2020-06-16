@@ -1,0 +1,8 @@
+# This defines our spacecraft page's path to the routing system.
+space.craft.description:
+  path: '/space-craft'
+  defaults:
+    _controller: '\Drupal\space_craft\Controller\SpaceCraftController::description'
+    _title: 'Space Craft Plugin'
+  requirements:
+    _permission: 'access content'

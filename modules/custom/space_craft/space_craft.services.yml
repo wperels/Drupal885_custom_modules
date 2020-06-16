@@ -1,0 +1,7 @@
+# This declares the plugin manager to the service container.
+services:
+  plugin.manager.probe:
+    # This tells the service container the name of our plugin manager class.
+    class: Drupal\space_craft\ProbePluginManager
+    parent: default_plugin_manager
+
