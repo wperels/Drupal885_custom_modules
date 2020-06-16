@@ -1,0 +1,21 @@
+probe_orbit:
+  path: /the/probe/orbits/{count}
+  defaults:
+      _controller: Drupal\probe_orbit\Controller\OrbitController::orbit
+  requirements:
+      _permission: 'access content'
+  
+probe_orbit_alt:
+  path: /the/probe/orbitsalt/{count}
+  defaults:
+      _controller: 'probe_orbit.orbit_controlleralt:orbitAlt'
+  requirements:
+      _permission: 'access content'
+      
+probe_orbit_report:
+  path: /probe/report
+  defaults:
+    _form: 'Drupal\probe_orbit\Form\ProbeReportForm'
+    _title: 'Probe Report'
+  requirements:
+    _permission: 'access content'
