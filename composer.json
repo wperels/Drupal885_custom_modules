@@ -11,7 +11,7 @@
     "require": {
         "composer/installers": "^1.0.24",
         "drupal/console": "~1.0",
-        "drupal/core": "~8.8.0",
+        "drupal/core": "8.9.1",
         "drupal/core-project-message": "~8.8.0",
         "drupal/core-vendor-hardening": "~8.8.0",
         "wikimedia/composer-merge-plugin": "^1.4",
