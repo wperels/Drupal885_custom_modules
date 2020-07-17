@@ -1,5 +1,4 @@
-# Drupal_custom_modules
-# Custom modules that demonstrate the use of Drupal essential APIs 
+# Custom modules that demonstrate the use of Drupal 8/9 essential APIs 
 
 ## Probe Orbit module
 
@@ -9,11 +8,11 @@
 
 ## Probe Block module
 
-##### Programmatically creates a custom Block that displays a list of enabled modules. Demonstrates a few  API methods provided by the Block sub-system, such as configuration form, form validation and access control. First version makes a call to the global Drupal Service container to get the list of enabled modules.  Second version, takes advantage of Dependency Injection. Gets the core Module Handler service from the service container, injecting this service into a plugin class and finally uses the Module Handler service to fetch then display a list of enabled modules in a custom block.
+###### Programmatically creates a custom block that displays a list of enabled modules. Demonstrates a few  API methods provided by the Block sub-system, such as configuration form, form validation and access control. First version makes a call to the global Drupal Service container to get the list of enabled modules.  Second version, takes advantage of dependency injection. Gets the core Module Handler service from the service container, injecting this service into a plugin class and finally uses the Module Handler service to fetch then display a list of enabled modules in a custom block.
 
 ## Space Craft module
 
-###### Define a new plugin type, the probe plugin, which includes the following: the base class, an interface, and the plugin manager. Also the annotation definition, a controller for a new page, as well as the probe plugins themselves.
+###### Define a new plugin type, the probe plugin, which includes the following: the base class, an interface, and the plugin manager. Also the annotation definition, a controller for a new page, as well as, the probe plugins themselves.
 
 ## Space Craft Plugin module
 
@@ -21,4 +20,4 @@
 
 ## Mission module
 
-#### The Mission module is a custom entity with bundles. This means that you can create fully-fieldable entity types to store any type of data without all the overhead that comes with a custom content type. This entity type module also has some advantages over using the Paragraphs module, namely menus that link to entity types and the entities themselves. Also a useful entity type list, lists of the created entities, and an easy way to delete entities when necessary. Finally providing navigation, messages to the user, and a helpful administration experience.
+###### The Mission module is a custom entity with bundles. This means that you can create fully-fieldable entity types to store any type of data without all the overhead that comes with a custom content type. This entity type module also has some advantages over using the Paragraphs module, namely menus that link to entity types and the entities themselves. Also a useful entity type list, lists of the created entities, and an easy way to delete entities when necessary. Finally providing navigation, messages to the user, and a helpful administration experience.
