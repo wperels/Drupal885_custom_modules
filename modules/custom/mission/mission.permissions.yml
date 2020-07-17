@@ -1,0 +1,6 @@
+administer mission types:
+  title: 'Administer MissionEntity types'
+  restrict access: true
+
+permission_callbacks:
+  - '\Drupal\mission\MissionPermissionsGenerator::missionTypePermissions'

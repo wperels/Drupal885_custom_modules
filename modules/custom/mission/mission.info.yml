@@ -1,0 +1,6 @@
+name: Mission
+type: module
+description: Mission entity with bundles
+core: 8.x
+package: Custom Modules
+

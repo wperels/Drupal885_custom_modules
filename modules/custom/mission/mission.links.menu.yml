@@ -1,0 +1,11 @@
+mission_entity_collection_menu:
+  title: 'Mission entity list'
+  route_name: entity.mission.collection
+  description: 'List of Mission entities'
+  parent: system.admin_content
+
+mission_type_entity_collection_menu:
+  title: 'MissionEntity Types'
+  route_name: entity.mission_type.collection
+  description: 'List of Mission entity types (bundles)'
+  parent: system.admin_structure

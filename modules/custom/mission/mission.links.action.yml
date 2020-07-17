@@ -1,0 +1,11 @@
+mission_entity_action_add:
+  route_name: entity.mission.add_page
+  title: 'Add Mission entity'
+  appears_on:
+    - entity.mission.collection
+
+mission_entity_type_action_add:
+  route_name: entity.mission_type.add_form
+  title: 'Add Mission entity type (bundle)'
+  appears_on:
+    - entity.mission_type.collection
