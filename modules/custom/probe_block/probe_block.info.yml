@@ -5,4 +5,3 @@ package: Custom Modules
 core: 8.x
 dependencies:
     - block
-    - space_craft
