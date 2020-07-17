@@ -1,5 +1,5 @@
-# Drupal885_custom_modules
-# Examples of Drupal 8 custom modules.
+# Drupal_custom_modules
+# Custom modules that demonstrate the use of Drupal essential APIs 
 
 ## Probe Orbit module
 
@@ -17,4 +17,8 @@
 
 ## Space Craft Plugin module
 
-###### This custom module uses plugins to extend another modules behavior.  The module demonstrates use of Drupal Console on the command line to generate a new custom module. It also pulls a custom service from the container then injects it into a new controller. "mars2020_probe" is an example of creating an instance of an existing plugin type called probe (see the Space_craft module). Finally the module displays definitions and descriptions of all plugins of this type  on a custom page.
+###### This custom module uses plugins to extend another modules behavior.  The module demonstrates use of Drupal Console on the command line to generate a new custom module. It also pulls a custom service from the container then injects it into a new controller. "mars2020_probe" is an example of creating an instance of an existing plugin type called probe (see the Space_craft module). Finally the module displays definitions and descriptions of all plugins of this type on a custom page.
+
+## Mission module
+
+#### The Mission module is a custom entity with bundles. This means that you can create fully-fieldable entity types to store any type of data without all the overhead that comes with a custom content type. This entity type module also has some advantages over using the Paragraphs module, namely menus that link to entity types and the entities themselves. Also a useful entity type list, lists of the created entities, and an easy way to delete entities when necessary. Finally providing navigation, messages to the user, and a helpful administration experience.
