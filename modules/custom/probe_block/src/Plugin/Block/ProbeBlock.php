@@ -5,9 +5,9 @@
  * Contains \Drupal\probe_block\Plugin\Block\ProbeBlock.
  * 
  * A custom Block that displays a list of enabled
- * modules in our Drupal site. It also demonstrates a few
- * API methods provided by the Block sub-system, such as 
- * configuration form, form validation and access control.
+ * modules in our Drupal site. It illustrates implementing the Block API 
+ * and by extension the Plugin API, as well as, Drupal coding standards.
+ * Also shows use of a configuration form, form validation and access control.
  */
 
 namespace Drupal\probe_block\Plugin\Block;
@@ -55,8 +55,6 @@ class ProbeBlock extends BlockBase implements ContainerFactoryPluginInterface {
   
     $build = array();
     
-    // Use the global Drupal Service container to get
-    // the list of enabled modules
     $modules = $this->moduleHandler->getModuleList();
     
     // Set an index for the loop to count the 

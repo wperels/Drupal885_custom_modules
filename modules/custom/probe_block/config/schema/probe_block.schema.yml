@@ -1,4 +1,5 @@
 # Block schema
+# Must be included before first enabling this custom module.
 block.settings.probe_block:
   type: block_settings
   mapping:

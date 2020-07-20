@@ -2,13 +2,12 @@
 
 /**
  * @file
- * A module demonstrating Drupal coding practices and APIs.
+ * A module demonstrating the Block API and by extension the Plugin API
+ *  as well as, Drupal coding standards 
  *
- * This module provides a block that lists all of the
- * installed modules in our Drupal system. It illustrates coding standards,
- * practices, and API use for Drupal 8.
- * 
- *  see https://robvarkonyi.com/blog/ultimate-guide-drupal-8/your-first-drupal-8-module
+ * This module provides a block that lists all of the installed modules in our Drupal system. 
+ * It illustrates implementing the Block API and by extension the Plugin API, 
+ * as well as, Drupal coding standard.
 */
 
 /**
