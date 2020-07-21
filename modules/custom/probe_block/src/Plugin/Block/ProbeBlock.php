@@ -4,10 +4,7 @@
  * @file
  * Contains \Drupal\probe_block\Plugin\Block\ProbeBlock.
  * 
- * A custom Block that displays a list of enabled
- * modules in our Drupal site. It illustrates implementing the Block API 
- * and by extension the Plugin API, as well as, Drupal coding standards.
- * Also shows use of a configuration form, form validation and access control.
+ * A custom block that displays a list of a Drupal sites enabled modules.
  */
 
 namespace Drupal\probe_block\Plugin\Block;

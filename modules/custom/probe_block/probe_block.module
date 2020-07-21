@@ -2,12 +2,17 @@
 
 /**
  * @file
- * A module demonstrating the Block API and by extension the Plugin API
- *  as well as, Drupal coding standards 
  *
- * This module provides a block that lists all of the installed modules in our Drupal system. 
- * It illustrates implementing the Block API and by extension the Plugin API, 
- * as well as, Drupal coding standard.
+ * A custom block that displays a list of a Drupal sites enabled modules.
+ * It illustrates implementing the Block API  and by extension the Plugin API, 
+ * as well as, Drupal coding standards. This module also shows use of a configuration form,  
+ * simple form validation, access control and hook_help. 
+ * The first version makes a call to the global Drupal service container to get the list of 
+ * enabled modules. Second version, takes advantage of dependency injection. Gets the core 
+ * Module Handler service from the service container, injecting this service into the constructor 
+ * of the ProbeBlock class and finally uses the Module Handler service to fetch 
+ * then display a list of enabled modules in a custom block.
+ *
 */
 
 /**
