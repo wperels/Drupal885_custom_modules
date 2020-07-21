@@ -1,4 +1,4 @@
-# Custom modules that demonstrate the use of Drupal 8/9 essential APIs 
+# Custom modules demonstrating the use of Drupal 8 essential APIs 
 
 ## Probe Orbit module
 
@@ -8,7 +8,7 @@
 
 ## Probe Block module
 
-###### Programmatically creates a custom block that displays a list of enabled modules. Demonstrates a few  API methods provided by the Block sub-system, such as configuration form, form validation and access control. First version makes a call to the global Drupal Service container to get the list of enabled modules.  Second version, takes advantage of dependency injection. Gets the core Module Handler service from the service container, injecting this service into a plugin class and finally uses the Module Handler service to fetch then display a list of enabled modules in a custom block.
+###### Programmatically creates a custom block displaying a list of a Drupal sites enabled modules. It illustrates implementing the Block API  and by extension the Plugin API, as well as, Drupal coding standards. This module also shows use of a configuration form,  simple form validation, access control and hook_help. The first version makes a call to the global Drupal service container to get the list of enabled modules. Second version, takes advantage of dependency injection. Gets the core Module Handler service from the service container, injecting this service into the constructor of the ProbeBlock class and finally uses the Module Handler service to fetch then display a list of enabled modules in a custom block.
 
 ## Space Craft module
 
