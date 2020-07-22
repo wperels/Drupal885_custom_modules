@@ -1,15 +1,19 @@
 <?php
 
 /* 
- *  An alternative service creates a string 'ORRRRbit'
- *  Be sure to watch space/indents in .yml files
+ * @file
+ * Contains \Drupal\probe_orbit\Space\OrbitGeneratorAlt.
+ * 
+ * Explores a method to pass services into the controller 
+ *  without needing to use the create function.
  */
 
 namespace Drupal\probe_orbit\Space;
 
-
-class OrbitGeneratorAlt 
-{
+/**
+ *  Generates the string used by the controller.
+ */
+class OrbitGeneratorAlt {
   public function getOrbitalt($length) 
     {
       $string = 'O'.str_repeat('R', $length).'bit!';

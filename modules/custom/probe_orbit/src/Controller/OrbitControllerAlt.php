@@ -1,9 +1,11 @@
 <?php
 
 /* 
- * Alternative method to register the controller as a service
- *  then refer to it in the routing.yml.
- *  No need for the __construct function.
+ * @file
+ * Contains \Drupal\probe_orbit\Space\OrbitControllerAlt.
+ * 
+ * Refer to controller service in the routing.yml. Be sure to watch space/indents in .yml files.
+ *  Register OrbitControllerAlt under a service alias (probe_orbit.orbit_controlleralt) in the service.yml. 
  */
 
 namespace Drupal\probe_orbit\Controller;
@@ -12,17 +14,12 @@ use Symfony\Component\HttpFoundation\Response;
 use Drupal\probe_orbit\Space\OrbitGeneratorAlt;
 use Drupal\Core\Controller\ControllerBase;
 
-class OrbitControllerAlt extends ControllerBase
-{
-  private $orbitGeneratorAlt;
+/**
+ * Create a new object to call getOrbitalt and pass in the count variable.
+ */
+class OrbitControllerAlt extends ControllerBase {
   
-//  public function __construct(OrbitGeneratorAlt $orbitGeneratorAlt) 
-//    {
-//      $this->orbitGeneratorAlt = $orbitGeneratorAlt;
-//    }
-  
-  public function orbitAlt($count) 
-    {
+  public function orbitAlt($count) {
       $orbitGeneratorAlt = new OrbitGeneratorAlt;
       $orbitalt = $orbitGeneratorAlt->getOrbitalt($count);
       return new Response($orbitalt);
