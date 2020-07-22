@@ -10,7 +10,6 @@
 namespace Drupal\probe_block\Plugin\Block;
 
 use Drupal\Core\Block\BlockBase;
-use Drupal\Core\Block\Annotation\Block;
 use Drupal\Core\Session\AccountInterface;
 use Drupal\Core\Access\AccessResult;
 use Drupal\Core\Form\FormStateInterface;
@@ -25,15 +24,15 @@ use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
  *   id = "probe_block",
  *   admin_label = @Translation("Probe Block"),
  *   category = @Translation("Drupal 8 Development")
- * )
+ *   )
  */
 class ProbeBlock extends BlockBase implements ContainerFactoryPluginInterface {
   
   protected $moduleHandler;
   
   /**
-   * 
    * @param ModuleHandler $module_handler
+   * 
    * The core Module Handler service. Injecting this service
    *  to access a core service not a call to the global Drupal object.
    */
@@ -42,23 +41,19 @@ class ProbeBlock extends BlockBase implements ContainerFactoryPluginInterface {
     $this->moduleHandler = $module_handler;
   }
   
-  public function build(){
-  
-     /**
+  /**
    * Implements \Drupal\Core\Block\BlockPluginInterface::build().
    *  
    * Displays the currently enabled modules in our Drupal site. 
    */
-  
+  public function build(){
     $build = array();
     
     $modules = $this->moduleHandler->getModuleList();
     
-    // Set an index for the loop to count the 
-    // number of iterations
+    // Set an index for the loop to count the number of iterations
     $index = 1;
     
-    // Loop through the modules and save them in a variable
     $list = array();
     foreach ($modules as $module => $path) {
       $list[$module] = $module;
@@ -78,20 +73,20 @@ class ProbeBlock extends BlockBase implements ContainerFactoryPluginInterface {
       '#list_type' => 'ol',
     );
     return $build;
- }
+  }
  
- /**
- * Overrides \Drupal\block\BlockBase::blockAccess().
- */
- protected function blockAccess(AccountInterface $account) {
+  /**
+  * Overrides \Drupal\block\BlockBase::blockAccess().
+  */
+  protected function blockAccess(AccountInterface $account) {
    // Only grant access to users with the 'administer blocks' permission.
-   return AccessResult::allowedIfHasPermission($account, 'administer blocks');
+    return AccessResult::allowedIfHasPermission($account, 'administer blocks');
  }
  
   /**
    * Overrides \Drupal\block\BlockBase::blockForm().
    */
- public function blockForm($form, FormStateInterface $form_state) {
+  public function blockForm($form, FormStateInterface $form_state) {
    // Add a simple text field on the Block configuration form
    // to limit the number of enabled modules to display
    $form['number_of_items'] = array(
@@ -99,9 +94,9 @@ class ProbeBlock extends BlockBase implements ContainerFactoryPluginInterface {
      '#title' => t('Number of items in list'),
      '#default_value' => $this->configuration['number_of_items'],
      '#description' => t('Define the number of items returned in the list.')
-   ); 
-   return $form;
- }
+    ); 
+    return $form;
+  }
  
   /**
    * Overrides \Drupal\block\BlockBase::blockSubmit().
@@ -109,23 +104,23 @@ class ProbeBlock extends BlockBase implements ContainerFactoryPluginInterface {
    * Stores the configuration setting based on the form
    * submission value.
    */
- public function blockSubmit($form, FormStateInterface $form_state) {
+  public function blockSubmit($form, FormStateInterface $form_state) {
    $this->configuration['number_of_items'] = intval($form_state->getValue
      ('number_of_items'));
- }
+  }
  
- /**
+  /**
    * Overrides \Drupal\block\BlockBase::blockValidate().
    * 
    * Validates the configuration form.
    */
- public function blockValidate($form, FormStateInterface $form_state) {
+  public function blockValidate($form, FormStateInterface $form_state) {
    if(!is_numeric($form_state->getValue('number_of_items'))) {
      $form_state->setErrorByName('number_of_items', t('Please enter a numeric value.'));
-   }
- }
+    }
+  }
  
-   /**
+  /**
    * Dependency injection override the parent method
    *   inject the Module Handler service into the controller.
    * 
