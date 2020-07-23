@@ -2,7 +2,7 @@
 
 /**
  * @file
- * Contains space_craft_plugin.module.
+ * Contains \Drupal\space_craft_plugin\space_craft_plugin.module.
  */
 
 use Drupal\Core\Routing\RouteMatchInterface;
