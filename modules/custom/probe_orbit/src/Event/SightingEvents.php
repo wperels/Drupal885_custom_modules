@@ -1,10 +1,13 @@
 <?php
 
 /* 
- *  Create a custom event, set it equal to a constant.
- *  Dispatch of this event occurs upon submit of 'probe_orbit_form'
- *  Two different methods plus a default method can be triggered.
- *  Custom logic determines which message displays on the page.
+ * @file
+ * Contains \Drupal\probe_orbit\Event\SightingEvents.
+ * 
+ * Create a custom event, set it equal to a constant.
+ * Dispatch of this event occurs upon submit of 'probe_orbit_form'
+ * Two different methods plus a default method can be triggered.
+ * Custom logic determines which message displays on the page.
  */
 
 namespace Drupal\probe_orbit\Event;

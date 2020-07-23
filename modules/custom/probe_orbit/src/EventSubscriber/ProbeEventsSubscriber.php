@@ -1,10 +1,13 @@
 <?php
 
 /* 
- *  Subscribe to SightingEvents::NEW_REPORT events and react to new reports.
- *  Point to two different methods to execute when an event is dispatched.
- *  Use custom logic along with examination of the Event object to determine 
- *    which message to display on the screen then stop propagation of the event.
+ * @file
+ * Contains \Drupal\probe_orbit\EventsSubscriber\ProbeEventsSubscriber.
+ * 
+ * Subscribe to SightingEvents::NEW_REPORT events and react to new reports.
+ * Point to two different methods to execute when an event is dispatched.
+ * Use custom logic along with examination of the Event object to determine 
+ *   which message to display on the screen then stop propagation of the event.
  */
 
 namespace Drupal\probe_orbit\EventSubscriber;

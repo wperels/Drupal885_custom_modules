@@ -1,10 +1,13 @@
 <?php
 
 /* 
- *  Create a custom form.
- *  Fetch an existing service from the container.
- *  Use service inside submitForm method to dispatch a custom event.
- *  Create a unique class to wrap the Event object and pass in the form submissions.  
+ * @file
+ * Contains \Drupal\probe_orbit\Form\ProbeReportForm.
+ * 
+ * Create a custom form.
+ * Fetch an existing service from the container.
+ * Use service inside submitForm method to dispatch a custom event.
+ * Create a unique class to wrap the Event object and pass in the form submissions.  
  */
 
 namespace Drupal\probe_orbit\Form;
@@ -28,7 +31,7 @@ class ProbeReportForm extends FormBase {
   public static function create(ContainerInterface $container) {
     return new static (
       $container->get('event_dispatcher')
-      );
+    );
   }
 
   public function buildForm(array $form, FormStateInterface $form_state) {
