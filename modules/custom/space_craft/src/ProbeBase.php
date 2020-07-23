@@ -1,8 +1,11 @@
 <?php
 
 /* 
- *  A base class to help developers implement their own probe plugins.
- *  Both the description and instruments properties are read from the @Probe annotation. 
+ * @file
+ * Contains \Drupal\space_craft\ProbeBase.
+ * 
+ * A base class to help developers implement their own probe plugins.
+ * Both the description and instruments properties are read from the @Probe annotation. 
  */
 
 namespace Drupal\space_craft;
@@ -16,7 +19,6 @@ abstract class ProbeBase extends PluginBase implements ProbeInterface {
    * {@inheritdoc}
    */
   public function description() {
-    // Retrieve the @description property from the annotation and return it.
     return $this->pluginDefinition['description'];
   }
   

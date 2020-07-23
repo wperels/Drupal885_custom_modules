@@ -1,6 +1,9 @@
 <?php
 
 /* 
+ * @file
+ * Contains \Drupal\space_craft\Plugin\Probe\ParkerSolarProbe.
+ * 
  * Provides a Parker Solar Probe plugin.
  */
 
@@ -13,11 +16,11 @@ use Drupal\Core\StringTranslation\TranslationInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
- *  @Probe(
- *    id = "parker_solar_probe",
- *    description = @Translation("Parker Solar Probe is a nasa spacecraft currently orbiting the Sun"),
- *    instruments = 4
- * )
+ * @Probe(
+ *   id = "parker_solar_probe",
+ *   description = @Translation("Parker Solar Probe is a nasa spacecraft currently orbiting the Sun"),
+ *   instruments = 4
+ *   )
  */
 
 class ParkerSolarProbe extends ProbeBase implements ContainerFactoryPluginInterface {
@@ -54,7 +57,6 @@ class ParkerSolarProbe extends ProbeBase implements ContainerFactoryPluginInterf
   public function __construct(array $configuration, $plugin_id, $plugin_description, TranslationInterface $translation ) {
    // Inject the translation service, then call setStringTranslation and pass in $transltion.
    $this->setStringTranslation($translation);
-   // Store the day to generate a special description.
    $this->day = date('D');
    // Pass the other parameters up to the parent constructor.
    parent::__construct($configuration, $plugin_id, $plugin_description);

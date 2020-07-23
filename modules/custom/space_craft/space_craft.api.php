@@ -2,6 +2,8 @@
 
 /* 
  * @file
+ * Contains \Drupal\space_craft\space_craft.api.
+ * 
  * Hooks spaecific to the space_craft module.
  */
 

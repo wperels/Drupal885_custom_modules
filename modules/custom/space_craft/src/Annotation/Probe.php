@@ -1,8 +1,11 @@
 <?php
 
 /* 
- *  An annotation class for the probe plugin type used to provide
- *   documentation about the meta-data needed.
+ * @file
+ * Contains \Drupal\space_craft\Annotation\Probe.
+ * 
+ * An annotation class for the probe plugin type used to provide
+ * documentation about the meta-data needed.
  */
 
 namespace Drupal\space_craft\Annotation;
@@ -19,20 +22,13 @@ use Drupal\Component\Annotation\Plugin;
 class Probe extends Plugin {
   
   /**
-   *
-   * @var \Drupal\Core\Annotation\Translation
-   *
-   * @ingroup plug-in_translatable
-   *
+   * @var type 
    */
   public $description;
   
-  /**
-   *  The number of instruments on board the space probe.
-   *  
-   *  @var int
-   * 
-   */
+/**
+ * The number of instruments on board the space probe.
+ * @var type 
+ */
   public $instruments;
-  
 }

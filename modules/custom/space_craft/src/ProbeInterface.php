@@ -1,7 +1,10 @@
 <?php
 
 /* 
- *  An interface for all probe type plugins.
+ * @file
+ * Contains \Drupal\space_craft\ProbePluginManager.
+ * 
+ * An interface for all probe type plugins.
  */
 
 namespace Drupal\space_craft;
@@ -18,12 +21,10 @@ interface ProbeInterface {
   public function instruments();
   
   /**
-   * 
    * @param array $extras
    * 
-   *  @return string
+   * @return string
    */
-  
   public function order(array $extras);
   
 }

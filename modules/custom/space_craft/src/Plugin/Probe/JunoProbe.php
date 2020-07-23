@@ -1,6 +1,9 @@
 <?php
 
 /* 
+ * @file
+ * Contains \Drupal\space_craft\Plugin\Probe\JunoProbe.
+ * 
  * Provides a Juno probe object.
  */
 
@@ -13,7 +16,7 @@ use Drupal\space_craft\ProbeBase;
  *    id = "juno_probe",
  *    description = @Translation("Juno is a nasa spacecraft currently orbiting Jupiter"),
  *    instruments = 8
- * )
+ *    )
  */
 
 class JunoProbe extends ProbeBase {
@@ -24,7 +27,6 @@ class JunoProbe extends ProbeBase {
    * @param array $extras
    * @return string
    */
-  
   public function order(array $extras) {
     $payload = [' JADE & JEDI, radio/plasma experiment', 'a gravity/radio science system, also'];
     $probe = array_merge($payload, $extras);

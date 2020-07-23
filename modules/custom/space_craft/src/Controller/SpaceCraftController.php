@@ -1,7 +1,10 @@
 <?php
 
 /* 
- *  Controller for probe example pages.
+ * @file
+ * Contains \Drupal\space_craft\Controller\SpaceCraftController.
+ * 
+ * Controller for probe plugins.
  */
 
 namespace Drupal\space_craft\Controller;
@@ -15,7 +18,6 @@ class SpaceCraftController extends ControllerBase {
   protected $probeManager;
   
   /**
-   * 
    * @param ProbePluginManager $probe_manager
    *   The probe plugin manager service. Injecting this service so that
    *   it can used to access the probe plugins.
@@ -28,8 +30,7 @@ class SpaceCraftController extends ControllerBase {
    * Displays a page with an overview of our plugin type and plugins.
    * 
    * @return array
-   *   Render API array with content at this path
-   *   /space_craft.
+   *   Render API array with content at this path /space_craft.
    */
   public function description() {
     $build = [];
@@ -38,9 +39,7 @@ class SpaceCraftController extends ControllerBase {
       '#markup' => $this->t("This page lists the probe plugins."),
     ];
     
-    // Get the list of all the probe plugins defined on the system from the
-    // plugin manager. Note that at this point, what we have is *definitions* of
-    // plugins, not the plugins themselves.
+    // Get the list of all the probe plugins defined on the system from the plugin manager. 
     $probe_plugin_definitions = $this->probeManager->getDefinitions();
     
     $items = [];

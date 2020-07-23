@@ -1,15 +1,16 @@
 <?php
 
 /* 
- *  Implements hook_probe_info_alter().
+ * @file
+ * Contains \Drupal\space_craft\space_craft.module.
  * 
- * Any module can implement hook_probe_info_alter() and alter the definitions
- * of all plugins discovered by the plugin manager.
- *
- * Note: Plugin definitions are cached after initially being discovered, and
- * altered. Any changes here will require a cache clear to take effect.
+ * Implements a hook for the Space Craft plugin.
  */
 
+/**
+ * Implements hook_probe_info_alter().
+ * @param type $probe_plugin_info
+ */
 function space_craft_probe_info_alter(&$probe_plugin_info) {
   // change the 'description' property for all probes.
    foreach($probe_plugin_info as $plugin_id => $plugin_definition) {

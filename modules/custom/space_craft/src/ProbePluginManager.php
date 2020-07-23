@@ -1,7 +1,10 @@
 <?php
 
 /* 
- *  A plugin manager for new probe plugins.
+ * @file
+ * Contains \Drupal\space_craft\ProbePluginManager.
+ * 
+ * A plugin manager for new probe plugins.
  */
 
 namespace Drupal\space_craft;
@@ -24,7 +27,6 @@ class ProbePluginManager extends DefaultPluginManager {
    *   Cache backend instance to use.
    * @param \Drupal\Core\Extension\ModuleHandlerInterface $module_handler
    *   The module handler to invoke the alter hook with.
-
    */
   public function __construct(\Traversable $namespaces, CacheBackendInterface $cache_backend, ModuleHandlerInterface $module_handler  ) {
     // Replace the $subdir parameter with subdirectories value for saved plugins.
