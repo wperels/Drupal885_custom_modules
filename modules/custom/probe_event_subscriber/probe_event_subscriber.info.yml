@@ -1,0 +1,6 @@
+name: Probe Event Subscriber
+type: module
+description: Probe Event Subscriber
+package: CUSTOM MODULES
+core: 8.x
+

@@ -1,0 +1,12 @@
+services:
+    probe_event_subscriber.probe_listener:
+        class: Drupal\probe_event_subscriber\Space\ProbeListener
+        arguments: ['@logger.factory']
+        tags:
+            - { name: event_subscriber }
+            
+    probe_event_subscriber.event_subscriber:
+        class: Drupal\probe_event_subscriber\EventSubscriber\ProbeEventSubscriber
+        arguments: []
+        tags: 
+            - { name: event_subscriber }

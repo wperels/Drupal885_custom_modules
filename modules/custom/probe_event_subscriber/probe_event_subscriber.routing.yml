@@ -1,0 +1,7 @@
+probe_event_subscriber_report:
+  path: /probe/report
+  defaults:
+    _form: 'Drupal\probe_event_subscriber\Form\ProbeReportForm'
+    _title: 'Probe Report'
+  requirements:
+    _permission: 'access content'
