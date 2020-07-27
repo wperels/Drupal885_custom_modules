@@ -10,7 +10,7 @@
 
 ## Probe Event Subscriber module
 
-###### This module also shows the use of an event subscriber. Register a listener and an event subscriber with a service tag in the services.yml. Provide a list of subscribed events along with callback functions for each. Log a message in response to the event using a service from the container. Create a custom form, fetch the event dispatch service from the container to trigger an event. Insatiate a custom class that wraps the Event object. Register an event subscriber with custom logic to determine which message appears on the page.
+###### This module shows the use of an event subscriber. Register a listener and an event subscriber with a service tag in the services.yml. Provide a list of subscribed events along with callback functions for each. Log a message in response to the event using a service from the container. Create a custom form, fetch the event dispatch service from the container to trigger an event. Insatiate a custom class that wraps the Event object. Register an event subscriber with custom logic to determine which message appears on the page.
 
 ## Probe Orbit module
 
