@@ -8,11 +8,13 @@
 
 ###### Programmatically creates a custom block displaying a list of a Drupal sites enabled modules. It illustrates implementing the Block API  and by extension the Plugin API, as well as, Drupal coding standards. This module also shows use of a configuration form,  simple form validation, access control and hook_help. The first version makes a call to the global Drupal service container to get the list of enabled modules. Second version, takes advantage of dependency injection. Gets the core Module Handler service from the service container, injecting this service into the constructor of the ProbeBlock class and finally uses the Module Handler service to fetch then display a list of enabled modules in a custom block.
 
+## Probe Event Subscriber module
+
+###### This module also shows the use of an event subscriber. Register a listener and an event subscriber with a service tag in the services.yml. Provide a list of subscribed events along with callback functions for each. Log a message in response to the event using a service from the container. Create a custom form, fetch the event dispatch service from the container to trigger an event. Insatiate a custom class that wraps the Event object. Register an event subscriber with custom logic to determine which message appears on the page.
+
 ## Probe Orbit module
 
 ###### A Drupal 8 module which demonstrates the use of both custom and core services. With a wildcard in the routing.yml and a new Response object in the controller the custom page displays the string "OrBBBBBBit!" The number of B's in the string is depend on the number used in the URL. The module teaches the service container to instantiate a custom service. It then grabs an existing service from the container using it in the controller to log a message that can be found under the admin menu Reports/Recent log messages. This module also contains an alternative controller and generator  which explores another method to pass services into the controller without needing to use the create function.
-
-###### This module also shows the use of an event subscriber. Register a listener and an event subscriber with a service tag in the services.yml. Provide a list of subscribed events along with callback functions for each. Log a message in response to the event using a service from the container. Create a custom form, fetch the event dispatch service from the container to trigger an event. Insatiate a custom class that wraps the Event object. Register an event subscriber with custom logic to determine which message appears on the page.
 
 ## Space Craft module
 
