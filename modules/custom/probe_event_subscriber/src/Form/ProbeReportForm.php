@@ -70,6 +70,12 @@ class ProbeReportForm extends FormBase {
     return 'probe_event_subscriber_form';
   }
   
+  /**
+   * Submit form to dispatch a custom event.
+   * 
+   * @param array $form
+   * @param FormStateInterface $form_state
+   */
   public function submitForm(array &$form, FormStateInterface $form_state) {
     $type = $form_state->getValue('sighting_type');
     $report = $form_state->getValue('sighting');

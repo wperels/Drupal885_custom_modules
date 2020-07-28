@@ -21,9 +21,13 @@ class ProbeListener implements EventSubscriberInterface {
       $this->loggerChannel = $loggerChannel;
   }
   
+  /**
+   * to log a message type "?orbit=1" in URL
+   * 
+   * @param GetResponseEvent $event
+   */
   public function onKernelRequest(GetResponseEvent $event) {
      // var_dump $event variable belongs to what object
-     // to use type "?orbit=1" in URL
      #var_dump($event);die();
      $request = $event->getRequest();
      $shouldOrbit = $request->query->get('orbit');
@@ -35,6 +39,12 @@ class ProbeListener implements EventSubscriberInterface {
       }
   }
   
+  /**
+   * 
+   * @return type 
+   * KernelEvents::REQUEST; // The REQUEST event 
+   *  occurs at the very beginning of request dispatching.
+   */
   public static function getSubscribedEvents() {
     return [
       KernelEvents::REQUEST => 'onKernelRequest',

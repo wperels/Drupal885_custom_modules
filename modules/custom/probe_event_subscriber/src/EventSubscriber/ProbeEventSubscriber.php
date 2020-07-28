@@ -18,13 +18,19 @@ use Drupal\probe_event_subscriber\Event\SightingEvents;
 use Drupal\probe_event_subscriber\Event\SightingReportEvent;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 
-
+/**
+ * Event Subscriber ProbeEventSubscriber.
+ */
 class ProbeEventSubscriber implements EventSubscriberInterface {
   
   use StringTranslationTrait;
   use MessengerTrait;
   
+  /**
+   * {@inheritdoc}
+   */
   public static function getSubscribedEvents() {
+    // See the NEW_REPORT constint defined in SightingEvents.php
     $events[SightingEvents::NEW_REPORT][] = ['notifyNASA'];
     $events[SightingEvents::NEW_REPORT][] = ['notifySETI', -100];
     $events[SightingEvents::NEW_REPORT][] = ['notifyDefault', -255];
@@ -32,6 +38,11 @@ class ProbeEventSubscriber implements EventSubscriberInterface {
     return $events;
   }
   
+  /**
+   * Code that should be triggered on event specified.
+   * 
+   * @param SightingReportEvent $event
+   */
   public function notifyNASA(SightingReportEvent $event) {
     if($event->getType() == 'new_horizons') {
       $this->messenger()->addStatus($this->t('NASA has been alerted. One of the best probes to date has come back to Earth.', ['@method' => __METHOD__]));
