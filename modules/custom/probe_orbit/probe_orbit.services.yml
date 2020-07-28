@@ -10,16 +10,4 @@ services:
       
     probe_orbit.orbit_controlleralt:
         class: Drupal\probe_orbit\Controller\OrbitControllerAlt
-        arguments: []   
-      
-    probe_orbit.probe_listener:
-        class: Drupal\probe_orbit\Space\ProbeListener
-        arguments: ['@logger.factory']
-        tags:
-            - { name: event_subscriber }
-            
-    probe_orbit.event_subscriber:
-        class: Drupal\probe_orbit\EventSubscriber\ProbeEventsSubscriber
-        arguments: []
-        tags: 
-            - { name: event_subscriber }
+        arguments: [] 
