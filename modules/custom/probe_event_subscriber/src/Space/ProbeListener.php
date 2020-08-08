@@ -14,9 +14,18 @@ use Symfony\Component\HttpKernel\KernelEvents;
 use Symfony\Component\HttpKernel\Event\GetResponseEvent;
 use Drupal\Core\Logger\LoggerChannelFactoryInterface;
 
+/**
+ * Class ProbeListener.
+ */
 class ProbeListener implements EventSubscriberInterface {
   private $loggerChannel;
   
+  /**
+   * Constructs a new ProbeListener object.
+   * 
+   * @param LoggerChannelFactoryInterface $loggerChannel
+   *   The logger service.
+   */
   public function __construct(LoggerChannelFactoryInterface $loggerChannel) {
       $this->loggerChannel = $loggerChannel;
   }
@@ -40,8 +49,9 @@ class ProbeListener implements EventSubscriberInterface {
   }
   
   /**
+   * {@inheritdoc}
    * 
-   * @return type 
+   * @return array 
    * KernelEvents::REQUEST; // The REQUEST event 
    *  occurs at the very beginning of request dispatching.
    */

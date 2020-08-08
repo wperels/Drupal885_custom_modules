@@ -22,12 +22,28 @@ use Drupal\probe_event_subscriber\Event\SightingReportEvent;
 
 class ProbeReportForm extends FormBase {
   
+  /**
+   * The event dispatcher service.
+   * 
+   * @var Symfony\Component\EventDispatcher\EventDispatcherInterface
+   */
   protected $eventDispatcher;
   
+  /**
+   * Constructor to put the EventDispatcher service on the property.
+   * 
+   * @param EventDispatcherInterface $event_dispatcher
+   */
   public function __construct(EventDispatcherInterface $event_dispatcher) {
     $this->eventDispatcher = $event_dispatcher;
   }
   
+  /**
+   * {@inheritdoc}
+   * 
+   * @param ContainerInterface $container
+   * @return \static
+   */
   public static function create(ContainerInterface $container) {
     return new static (
       $container->get('event_dispatcher')

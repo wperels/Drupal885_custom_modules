@@ -11,6 +11,9 @@ namespace Drupal\probe_event_subscriber\Event;
 
 use Symfony\Component\EventDispatcher\Event;
 
+/**
+ * 
+ */
 class SightingReportEvent extends Event {
 
   protected $type;
