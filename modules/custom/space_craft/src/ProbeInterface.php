@@ -2,7 +2,7 @@
 
 /* 
  * @file
- * Contains \Drupal\space_craft\ProbePluginManager.
+ * Contains \Drupal\space_craft\ProbeInterface.
  * 
  * An interface for all probe type plugins.
  */

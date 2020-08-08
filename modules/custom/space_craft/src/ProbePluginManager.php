@@ -14,7 +14,9 @@ use Drupal\Core\Cache\CacheBackendInterface;
 use Drupal\Core\Extension\ModuleHandlerInterface;
 use Drupal\space_craft\Annotation\Probe;
 
-
+/**
+ * Class ProbePluginManager
+ */
 class ProbePluginManager extends DefaultPluginManager {
   
   /**
@@ -29,7 +31,7 @@ class ProbePluginManager extends DefaultPluginManager {
    *   The module handler to invoke the alter hook with.
    */
   public function __construct(\Traversable $namespaces, CacheBackendInterface $cache_backend, ModuleHandlerInterface $module_handler  ) {
-    // Replace the $subdir parameter with subdirectories value for saved plugins.
+    // The subdirectories for saved plugins.
     $subdir = 'Plugin/Probe';
     
     // The name of the interface that plugins should adhere to.

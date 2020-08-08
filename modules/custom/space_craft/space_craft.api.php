@@ -10,8 +10,7 @@
 /**
  * Alter the definitions of all the Probe plugins.
  *
- * You can implement this hook to do things like change the properties for each
- * plugin or change the implementing class for a plugin.
+ * Implements hook_alter().
  *
  * This hook is invoked by ProbePluginManager::__construct().
  *

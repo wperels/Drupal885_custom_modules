@@ -21,14 +21,9 @@ use Drupal\Component\Annotation\Plugin;
  */
 class Probe extends Plugin {
   
-  /**
-   * @var type 
-   */
+  //A string property that holds the description.
   public $description;
   
-/**
- * The number of instruments on board the space probe.
- * @var type 
- */
+  //The number of instruments on board the space probe.
   public $instruments;
 }
