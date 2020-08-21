@@ -1,12 +1,16 @@
 <?php
 
+/* 
+ * @file
+ * Contains Drupal\Tests\space_craft_plugin\Functional\LoadTest
+ */
 namespace Drupal\Tests\space_craft_plugin\Functional;
 
 use Drupal\Core\Url;
 use Drupal\Tests\BrowserTestBase;
 
 /**
- * Simple test to ensure that main page loads with module enabled.
+ * Functional test to ensure that main page loads with module enabled.
  *
  * @group space_craft_plugin
  */
